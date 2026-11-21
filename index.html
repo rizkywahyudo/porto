@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a31">
+<meta name="description" content="Portofolio Rizky Wahyudo — teknisi mesin arcade, maintenance, electrical dan troubleshooting dengan pengalaman 10 tahun di industri rekreasi.">
+<title>Rizky Wahyudo | Technician Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+ --bg:#0c1425;--panel:#121f35;--panel2:#172741;--line:rgba(183,203,238,.14);
+ --text:#f4f7ff;--muted:#aab8ce;--blue:#82b5ff;--blue2:#b6d5ff;
+ --cyan:#74d8df;--gold:#e7c58a;--max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(90%,var(--max));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(12,20,37,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font:800 20px Manrope,sans-serif;letter-spacing:.04em}
+.brand span{color:var(--blue)}
+.navlinks{display:flex;align-items:center;gap:27px}
+.navlinks a{font-size:13px;color:var(--muted);transition:.2s}
+.navlinks a:hover{color:var(--blue2)}
+.nav-cta{padding:9px 15px;border:1px solid #82b5ff66;border-radius:8px;color:var(--blue2)!important}
+.menu{display:none;border:0;background:none;color:var(--text);font-size:22px}
+.hero{position:relative;overflow:hidden;padding:105px 0 95px;background:radial-gradient(ellipse at 83% 22%,rgba(67,111,174,.23),transparent 42%),linear-gradient(135deg,#0c1425,#101d34)}
+.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid #8bbaff12;border-radius:50%;right:-160px;bottom:-270px;box-shadow:0 0 0 55px #8bbaff08,0 0 0 110px #8bbaff05}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:65px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue2);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid #82b5ff45;background:#82b5ff0d;border-radius:30px;padding:8px 13px}
+.eyebrow i{font-size:8px;color:var(--cyan)}
+h1,h2,h3{font-family:Manrope,sans-serif}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.12;letter-spacing:-.045em;margin:24px 0 19px}
+h1 span{color:var(--blue)}
+.hero-copy{max-width:650px;color:var(--muted);font-size:16px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid var(--line);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--blue);color:#0b1830;border-color:var(--blue)}
+.btn-outline{color:var(--text);background:#ffffff06}
+.identity{max-width:350px;margin-left:auto;padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#1b2d49,#111d32);box-shadow:0 25px 70px #0005;text-align:center}
+.portrait{width:180px;height:180px;object-fit:cover;object-position:center 27%;border-radius:50%;border:5px solid #b6d5ff25;background:#fff;margin:0 auto 18px;display:block}
+.identity h2{font-size:22px}
+.identity .role{font-size:13px;color:var(--muted);margin-top:4px}
+.identity .location{font-size:12px;color:var(--blue2);margin-top:14px}
+.identity .location i{margin-right:6px}
+.quickfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:54px;max-width:670px}
+.fact{padding:15px 17px;background:#ffffff07;border:1px solid var(--line);border-radius:10px}
+.fact strong{display:block;font:800 23px Manrope;color:var(--blue2)}
+.fact span{font-size:11px;color:var(--muted)}
+section{padding:88px 0}
+.section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:700}
+.section-title{font-size:clamp(27px,4vw,37px);margin:8px 0 10px;letter-spacing:-.03em}
+.section-desc{color:var(--muted);font-size:14px;max-width:650px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;margin-top:38px}
+.about-copy p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.profile-details{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail{padding:17px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.detail span{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}
+.detail strong{font-size:13px;font-weight:600}
+.skills-section{background:#0f1a2d}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
+.skill{padding:23px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:.2s}
+.skill:hover,.job:hover,.case:hover{border-color:#82b5ff70;transform:translateY(-3px)}
+.skill-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:11px;background:#82b5ff15;color:var(--blue);font-size:18px;margin-bottom:16px}
+.skill h3{font-size:15px;margin-bottom:7px}
+.skill p{font-size:12px;color:var(--muted)}
+.skill-tags{font-size:11px;color:var(--blue2);margin-top:12px}
+.experience-list{margin-top:37px;border-left:1px solid #82b5ff65;padding-left:27px}
+.job{position:relative;padding:23px 25px;margin-bottom:17px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:.2s}
+.job:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--blue);left:-33px;top:30px;box-shadow:0 0 0 5px #82b5ff19}
+.job-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
+.job h3{font-size:17px}
+.company{font-size:13px;color:var(--blue2);margin-top:3px}
+.period{white-space:nowrap;font-size:11px;color:var(--gold);padding:5px 9px;border:1px solid #e7c58a35;border-radius:20px}
+.job ul{padding-left:18px;margin-top:14px;color:var(--muted);font-size:13px}
+.job li{padding:2px 0}
+.projects{background:#0f1a2d}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px;margin-top:35px}
+.case{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:13px;transition:.2s}
+.case-head{display:flex;align-items:center;gap:14px;margin-bottom:13px}
+.case-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;background:#82b5ff14;color:var(--blue);border-radius:12px;font-size:20px}
+.case h3{font-size:16px}
+.case p{font-size:13px;color:var(--muted)}
+.case .note{margin-top:13px;color:var(--blue2);font-size:11px}
+.tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.tools span{font-size:12px;color:var(--blue2);background:#82b5ff10;border:1px solid #82b5ff25;padding:7px 11px;border-radius:7px}
+.contact-panel{padding:43px;border-radius:16px;border:1px solid #82b5ff35;background:radial-gradient(circle at 90% 0%,#34527a66,transparent 45%),linear-gradient(135deg,#172945,#121e33)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.contact-panel h2{font-size:30px;line-height:1.25}
+.contact-panel p{font-size:13px;color:var(--muted);margin-top:12px}
+.contact-list{display:grid;gap:12px}
+.contact-item{display:flex;gap:12px;align-items:center;padding:12px 14px;background:#07132666;border:1px solid var(--line);border-radius:9px;font-size:13px}
+.contact-item i{color:var(--blue);width:18px;text-align:center}
+.contact-item small{display:block;color:var(--muted);font-size:10px}
+footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px;text-align:center}
+@media(max-width:850px){
+ .hero-grid{grid-template-columns:1fr;gap:40px}.identity{margin:0;max-width:100%;display:grid;grid-template-columns:130px 1fr;align-items:center;text-align:left;column-gap:20px}
+ .portrait{width:125px;height:125px;grid-row:span 3;margin:0}
+ .about-grid{grid-template-columns:1fr;gap:25px}.skill-grid{grid-template-columns:repeat(2,1fr)}
+ .navlinks{gap:15px}.navlinks a{font-size:12px}
+}
+@media(max-width:620px){
+ nav{height:68px}.menu{display:block}
+ .navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 5%;background:#101c31;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}
+ .navlinks.open{display:flex}.navlinks a{padding:7px 0}
+ .hero{padding:75px 0 65px}h1{font-size:44px}.hero-copy{font-size:14px}
+ .quickfacts{margin-top:35px;gap:7px}.fact{padding:11px}.fact strong{font-size:19px}.fact span{font-size:9px}
+ section{padding:67px 0}.skill-grid,.case-grid{grid-template-columns:1fr}
+ .job-top{display:block}.period{display:inline-block;margin-top:10px}
+ .contact-grid{grid-template-columns:1fr}.contact-panel{padding:27px 21px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="container"><nav>
+  <a class="brand" href="#home">RIZKY<span> W.</span></a>
+  <button class="menu" id="menu" aria-label="Buka navigasi"><i class="fa-solid fa-bars"></i></button>
+  <div class="navlinks" id="navlinks">
+   <a href="#about">Profil</a><a href="#skills">Keahlian</a><a href="#experience">Pengalaman</a><a href="#projects">Kompetensi</a><a class="nav-cta" href="#contact">Hubungi Saya</a>
+  </div>
+ </nav></div>
+</header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+ <div>
+  <div class="eyebrow"><i class="fa-solid fa-circle"></i> TECHNICIAN PORTFOLIO</div>
+  <h1>Rizky Wahyudo<br><span>Technician &amp; Maintenance</span></h1>
+  <p class="hero-copy">Teknisi mesin arcade dengan pengalaman 10 tahun di industri rekreasi. Berpengalaman menangani instalasi, perbaikan, wiring, inspeksi operasional, serta maintenance mesin game dan wahana.</p>
+  <div class="hero-actions">
+   <a class="btn btn-primary" href="#experience"><i class="fa-solid fa-briefcase"></i> Lihat Pengalaman</a>
+   <a class="btn btn-outline" href="https://wa.me/6285781268571"><i class="fa-brands fa-whatsapp"></i> Hubungi Saya</a>
+  </div>
+  <div class="quickfacts">
+   <div class="fact"><strong>10 Tahun</strong><span>Pengalaman teknis (sesuai CV)</span></div>
+   <div class="fact"><strong>2016–2024</strong><span>Trans Studio</span></div>
+   <div class="fact"><strong>2015–Kini</strong><span>Perjalanan di industri arcade</span></div>
+  </div>
+ </div>
+ <aside class="identity">
+  <img class="portrait" src="data:image/jpeg;base64,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" alt="Foto profil Rizky Wahyudo">
+  <h2>Rizky Wahyudo</h2>
+  <p class="role">Arcade Technician · Maintenance · Troubleshooting</p>
+  <p class="location"><i class="fa-solid fa-location-dot"></i> Cakung, Jakarta Timur</p>
+ </aside>
+</div></section>
+
+<section id="about"><div class="container">
+ <div class="section-kicker">01 / Profil Profesional</div>
+ <h2 class="section-title">Tentang Saya</h2>
+ <p class="section-desc">Ringkasan perjalanan dan fokus pekerjaan teknis.</p>
+ <div class="about-grid">
+  <div class="about-copy">
+   <p>Saya memiliki pengalaman 10 tahun sebagai teknisi mesin arcade, menangani kerusakan pada mesin games, wahana, dan area operasional di perusahaan rekreasi. Terbiasa menganalisis masalah teknis serta melakukan perbaikan.</p>
+   <p>Pengalaman kerja mencakup instalasi mesin game arcade, perbaikan error dan kerusakan, pembuatan wiring mesin, pengecekan rutin sebelum dan selama operasional, maintenance harian maupun bulanan, serta penyusunan laporan kerja.</p>
+   <p>Memiliki keterampilan pendukung dalam elektronika, kelistrikan arus lemah dan arus kuat, pembacaan skema, penggunaan alat ukur, serta pekerjaan fabrikasi ringan seperti pengelasan dan gerinda.</p>
+  </div>
+  <div class="profile-details">
+   <div class="detail"><span>Lokasi</span><strong>Cakung, Jakarta Timur</strong></div>
+   <div class="detail"><span>Bidang</span><strong>Arcade &amp; Recreation Engineering</strong></div>
+   <div class="detail"><span>Fokus utama</span><strong>Maintenance &amp; Repair</strong></div>
+   <div class="detail"><span>Pengalaman</span><strong>10 tahun (tercantum di CV)</strong></div>
+   <div class="detail"><span>Email</span><strong>rizkywahyudo18@gmail.com</strong></div>
+   <div class="detail"><span>WhatsApp</span><strong>0857 8126 8571</strong></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="skills-section" id="skills"><div class="container">
+ <div class="section-kicker">02 / Keahlian Teknis</div>
+ <h2 class="section-title">Kompetensi Teknik</h2>
+ <p class="section-desc">Disusun berdasarkan daftar keterampilan yang tercantum pada CV.</p>
+ <div class="skill-grid">
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-bolt"></i></div><h3>Kelistrikan</h3><p>Pengetahuan kelistrikan arus lemah dan arus kuat, instalasi kelistrikan, serta kalkulasi efisiensi penggunaan listrik.</p><div class="skill-tags">Electrical · Installation · Energy Efficiency</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-microchip"></i></div><h3>Elektronika</h3><p>Pengetahuan komponen elektronika serta penggunaan solder listrik dan solder uap.</p><div class="skill-tags">Electronic Components · Soldering</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>Skema &amp; Wiring</h3><p>Membuat atau membaca desain skema, sirkuit, layout, serta memahami keamanan wiring atau perkabelan.</p><div class="skill-tags">Circuit · Layout · Wiring Safety</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-gauge"></i></div><h3>Pengukuran</h3><p>Penggunaan multimeter untuk mendukung pemeriksaan dan identifikasi masalah teknis.</p><div class="skill-tags">Multimeter · Measurement</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-gears"></i></div><h3>Analisis Mekanikal &amp; Elektrikal</h3><p>Analisis dan identifikasi masalah elektrikal maupun mekanikal pada mesin dan peralatan.</p><div class="skill-tags">Fault Identification · Repair</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Peralatan Kerja</h3><p>Penggunaan alat las, gerinda, dan bor listrik untuk pekerjaan perbaikan dan pendukung teknis.</p><div class="skill-tags">Welding · Grinding · Drilling</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-toggle-on"></i></div><h3>Sistem Kontrol</h3><p>Pengetahuan sistem relay dan kontaktor untuk kebutuhan sistem kontrol.</p><div class="skill-tags">Relay · Contactor</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Efisiensi Operasional</h3><p>Efisiensi drawdown serta kalkulasi dan pemantauan penggunaan listrik.</p><div class="skill-tags">Drawdown · Electricity Monitoring</div></article>
+  <article class="skill"><div class="skill-icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Problem Solving</h3><p>Manajemen waktu dan penyelesaian masalah dalam pelaksanaan pekerjaan teknis.</p><div class="skill-tags">Time Management · Problem Solving</div></article>
+ </div>
+</div></section>
+
+<section id="experience"><div class="container">
+ <div class="section-kicker">03 / Riwayat Karier</div>
+ <h2 class="section-title">Pengalaman Kerja</h2>
+ <p class="section-desc">Riwayat pekerjaan dan tanggung jawab sebagaimana tercantum dalam CV.</p>
+ <div class="experience-list">
+  <article class="job">
+   <div class="job-top"><div><h3>Teknisi Game Arcade</h3><div class="company">Cow Play Cow Moo</div></div><span class="period">Okt 2024 – Saat ini</span></div>
+   <ul>
+    <li>Instalasi mesin game arcade.</li><li>Perbaikan error dan kerusakan mesin.</li>
+    <li>Pembuatan wiring untuk mesin.</li><li>Pengecekan rutin harian mesin yang operasional.</li>
+    <li>Membuat laporan kerja harian.</li><li>Maintenance harian dan bulanan.</li>
+   </ul>
+  </article>
+  <article class="job">
+   <div class="job-top"><div><h3>Ride &amp; Games Engineer</h3><div class="company">PT. Trans Rekreasindo (Trans Studio)</div></div><span class="period">Okt 2016 – Sept 2024</span></div>
+   <ul>
+    <li>Pengecekan rutin wahana dan mesin game sebelum operasional.</li>
+    <li>Perbaikan mesin dan wahana yang mengalami error atau kerusakan.</li>
+    <li>Maintenance dan cleaning mesin harian.</li>
+    <li>Mencatat dan memonitor penggunaan listrik untuk efisiensi.</li>
+    <li>Penggantian lampu area operasional, office, dan gudang.</li>
+    <li>Pengecekan rutin wahana playground dan perbaikan.</li>
+   </ul>
+  </article>
+  <article class="job">
+   <div class="job-top"><div><h3>Teknisi Magang</h3><div class="company">PT. Matahari Graha Fantasi (Timezone)</div></div><span class="period">Sept 2015 – Nov 2015</span></div>
+   <ul>
+    <li>Mempelajari tahapan dalam perbaikan mesin games.</li>
+    <li>Memperbaiki mesin, melakukan pengecatan, airbrush, pengelasan, dan gerinda.</li>
+    <li>Membuat laporan kerusakan dan hasil perbaikan.</li>
+   </ul>
+  </article>
+ </div>
+</div></section>
+
+<section class="projects" id="projects"><div class="container">
+ <div class="section-kicker">04 / Area Kompetensi</div>
+ <h2 class="section-title">Ruang Lingkup Pekerjaan</h2>
+ <p class="section-desc">Kategori pekerjaan yang didukung oleh tanggung jawab dan keterampilan di dalam CV. Ini bukan klaim proyek terpisah.</p>
+ <div class="case-grid">
+  <article class="case"><div class="case-head"><div class="case-icon"><i class="fa-solid fa-gamepad"></i></div><h3>Arcade Machine Installation</h3></div><p>Instalasi mesin game arcade, penyiapan wiring, dan pemeriksaan kondisi mesin untuk mendukung kesiapan operasional.</p><div class="note">Berdasarkan pengalaman Cow Play Cow Moo.</div></article>
+  <article class="case"><div class="case-head"><div class="case-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Machine Repair &amp; Troubleshooting</h3></div><p>Identifikasi error dan kerusakan pada mesin games maupun wahana, dilanjutkan dengan tindakan perbaikan.</p><div class="note">Berdasarkan pengalaman di Cow Play Cow Moo dan Trans Studio.</div></article>
+  <article class="case"><div class="case-head"><div class="case-icon"><i class="fa-solid fa-calendar-check"></i></div><h3>Preventive Maintenance</h3></div><p>Pengecekan rutin sebelum operasional, maintenance harian dan bulanan, serta cleaning mesin.</p><div class="note">Berdasarkan tanggung jawab pekerjaan di CV.</div></article>
+  <article class="case"><div class="case-head"><div class="case-icon"><i class="fa-solid fa-plug"></i></div><h3>Electrical &amp; Energy Monitoring</h3></div><p>Pembuatan wiring mesin, instalasi kelistrikan, pemantauan penggunaan listrik, dan pekerjaan penggantian lampu area.</p><div class="note">Berdasarkan pengalaman dan keterampilan di CV.</div></article>
+ </div>
+ <div class="tools"><span>Arcade Machines</span><span>Wahana &amp; Playground</span><span>Wiring</span><span>Multimeter</span><span>Relay &amp; Kontaktor</span><span>Soldering</span><span>Welding</span><span>Grinding</span><span>Electrical Installation</span><span>Maintenance Report</span></div>
+</div></section>
+
+<section id="contact"><div class="container">
+ <div class="contact-panel"><div class="contact-grid">
+  <div><div class="section-kicker">05 / Kontak</div><h2>Mari Diskusikan Peluang Kerja dan Kolaborasi</h2><p>Untuk kebutuhan rekrutmen atau informasi lebih lanjut mengenai pengalaman teknis, silakan hubungi saya melalui kontak berikut.</p>
+   <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/6285781268571"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a><a class="btn btn-outline" href="mailto:rizkywahyudo18@gmail.com"><i class="fa-solid fa-envelope"></i> Kirim Email</a></div>
+  </div>
+  <div class="contact-list">
+   <a class="contact-item" href="https://wa.me/6285781268571"><i class="fa-brands fa-whatsapp"></i><div><small>WhatsApp</small>0857 8126 8571</div></a>
+   <a class="contact-item" href="mailto:rizkywahyudo18@gmail.com"><i class="fa-solid fa-envelope"></i><div><small>Email</small>rizkywahyudo18@gmail.com</div></a>
+   <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><small>Domisili</small>Cakung, Jakarta Timur</div></div>
+   <div class="contact-item"><i class="fa-brands fa-linkedin"></i><div><small>LinkedIn</small>Rizky Wahyudo — cari berdasarkan nama</div></div>
+  </div>
+ </div></div>
+</div></section>
+</main>
+<footer><div class="container">© <span id="year"></span> Rizky Wahyudo · Technician Portfolio</div></footer>
+<script>
+const menu=document.getElementById('menu');
+const links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{
+ links.classList.toggle('open');
+ menu.innerHTML=links.classList.contains('open')?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';
+});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{
+ links.classList.remove('open');menu.innerHTML='<i class="fa-solid fa-bars"></i>';
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
